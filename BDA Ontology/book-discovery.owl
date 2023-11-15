@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologies="http://www.book-discovery.com/ontologies#">
     <owl:Ontology rdf:about="http://www.book-discovery.com/ontologies">
         <owl:versionIRI rdf:resource="http://www.book-discovery.com/ontologies/1.0.0"/>
     </owl:Ontology>
@@ -350,16 +351,6 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#like_count -->
-
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#like_count">
-        <rdfs:subPropertyOf rdf:resource="http://www.book-discovery.com/ontologies#count"/>
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Content"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#link -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#link">
@@ -386,24 +377,6 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#page_count -->
-
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#page_count">
-        <rdfs:subPropertyOf rdf:resource="http://www.book-discovery.com/ontologies#count"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Ebooks"/>
-                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#HardCover"/>
-                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#PaperBack"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#publish_date -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#publish_date">
@@ -418,16 +391,6 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#review_count -->
-
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#review_count">
-        <rdfs:subPropertyOf rdf:resource="http://www.book-discovery.com/ontologies#count"/>
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -733,6 +696,35 @@
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Video">
         <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Media"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#audio1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#audio1">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#AudioBook"/>
+        <ontologies:hasGenre rdf:resource="http://www.book-discovery.com/ontologies#biography"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#biography -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#biography">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Biography"/>
+        <ontologies:name>Biography</ontologies:name>
+    </owl:NamedIndividual>
     
 
 
