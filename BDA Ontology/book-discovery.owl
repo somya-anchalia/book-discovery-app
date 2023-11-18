@@ -77,12 +77,6 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#includes -->
-
-    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#includes"/>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#joins -->
 
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#joins">
@@ -97,6 +91,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#likes">
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
     </owl:ObjectProperty>
     
 
@@ -115,6 +110,7 @@
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#posts">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
     </owl:ObjectProperty>
     
 
@@ -147,30 +143,12 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#records -->
-
-    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#records">
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
-        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#AudioBook"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#written_by -->
 
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#written_by">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Ebooks"/>
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#HardCover"/>
-        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Size"/>
-    </rdf:Description>
     
 
 
