@@ -284,10 +284,11 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#publish_date -->
+    <!-- http://www.book-discovery.com/ontologies#publish_year -->
 
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#publish_date">
+    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#publish_year">
         <rdfs:subPropertyOf rdf:resource="http://www.book-discovery.com/ontologies#date"/>
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
