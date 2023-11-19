@@ -24,11 +24,55 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#belongs_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#belongs_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Discussion"/>
+                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Group"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#first_published_city -->
+
+    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#first_published_city">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#first_published_country -->
+
+    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#first_published_country">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Country"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#follows -->
 
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#follows">
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
         <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#has_category -->
+
+    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#has_category">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
     </owl:ObjectProperty>
     
 
@@ -77,16 +121,6 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#joins -->
-
-    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#joins">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
-        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Community"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#likes -->
 
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#likes">
@@ -115,11 +149,11 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#publishes -->
+    <!-- http://www.book-discovery.com/ontologies#published_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#publishes">
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
-        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+    <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#published_by">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdfs:range rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
     </owl:ObjectProperty>
     
 
@@ -346,7 +380,7 @@
     <!-- http://www.book-discovery.com/ontologies#BestSeller -->
 
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#BestSeller">
-        <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Filter"/>
+        <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
     </owl:Class>
     
 
@@ -370,6 +404,12 @@
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Business">
         <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Genre"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#Category -->
+
+    <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Category"/>
     
 
 
@@ -399,7 +439,7 @@
 
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Discussion">
         <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Community"/>
-        <owl:disjointWith rdf:resource="http://www.book-discovery.com/ontologies#Groups"/>
+        <owl:disjointWith rdf:resource="http://www.book-discovery.com/ontologies#Group"/>
     </owl:Class>
     
 
@@ -420,21 +460,15 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#Filter -->
-
-    <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Filter"/>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#Genre -->
 
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Genre"/>
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#Groups -->
+    <!-- http://www.book-discovery.com/ontologies#Group -->
 
-    <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Groups">
+    <owl:Class rdf:about="http://www.book-discovery.com/ontologies#Group">
         <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Community"/>
     </owl:Class>
     
@@ -481,7 +515,7 @@
     <!-- http://www.book-discovery.com/ontologies#NewRelease -->
 
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#NewRelease">
-        <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Filter"/>
+        <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
     </owl:Class>
     
 
@@ -561,7 +595,7 @@
     <!-- http://www.book-discovery.com/ontologies#TopRated -->
 
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#TopRated">
-        <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Filter"/>
+        <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
     </owl:Class>
     
 
@@ -599,6 +633,8 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#andy_bernard">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#goodreads_librarians_group"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#next_best_books_discussion"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Bernard</ontologies:name>
     </owl:NamedIndividual>
     
@@ -609,6 +645,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#andy_weir">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Weir</ontologies:name>
     </owl:NamedIndividual>
     
@@ -636,7 +673,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#best_seller">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#BestSeller"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Filter"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Seller</ontologies:name>
     </owl:NamedIndividual>
     
@@ -657,7 +694,6 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#bloomsbury_publishing">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
-        <ontologies:publishes rdf:resource="http://www.book-discovery.com/ontologies#harry_potter"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bloomsbury Publishing</ontologies:name>
     </owl:NamedIndividual>
     
@@ -678,7 +714,6 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#canongate_books">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
-        <ontologies:publishes rdf:resource="http://www.book-discovery.com/ontologies#life_of_pi"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canongate Books</ontologies:name>
     </owl:NamedIndividual>
     
@@ -689,7 +724,6 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#crown_publishing_group">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
-        <ontologies:publishes rdf:resource="http://www.book-discovery.com/ontologies#the_martian"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crown Publishing Group</ontologies:name>
     </owl:NamedIndividual>
     
@@ -700,6 +734,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#dwight_shrute">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#best_thrillers_discussion"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dwight Shrute</ontologies:name>
     </owl:NamedIndividual>
     
@@ -808,7 +843,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#goodreads_librarians_group">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Community"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Groups"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Group"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodreads Librarians Group</ontologies:name>
     </owl:NamedIndividual>
     
@@ -819,7 +854,13 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#harry_potter">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#HardCover"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#london"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_kingdom"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_fiction"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#amazing_fiction"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#bloomsbury_publishing"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#readers_favorite_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#jk_rowling"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</ontologies:name>
@@ -851,6 +892,8 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#jan_levinson">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#best_thrillers_discussion"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#goodreads_librarians_group"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jan Levinson</ontologies:name>
     </owl:NamedIndividual>
     
@@ -861,6 +904,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#jim_halpert">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#next_best_books_discussion"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Halpert</ontologies:name>
     </owl:NamedIndividual>
     
@@ -871,6 +915,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#jk_rowling">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#best_fiction_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J.K. Rowling</ontologies:name>
     </owl:NamedIndividual>
     
@@ -890,7 +935,13 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#life_of_pi">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Ebooks"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#cambridge"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_kingdom"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#canongate_books"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Of Pi</ontologies:name>
@@ -922,6 +973,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#michael_scott">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#best_thrillers_discussion"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Scott</ontologies:name>
     </owl:NamedIndividual>
     
@@ -958,7 +1010,7 @@
     <!-- http://www.book-discovery.com/ontologies#new_release -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#new_release">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Filter"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#NewRelease"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Seller</ontologies:name>
     </owl:NamedIndividual>
@@ -980,6 +1032,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#next_best_books_discussion">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Community"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Discussion"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#goodreads_librarians_group"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Next Best Books Discussion</ontologies:name>
     </owl:NamedIndividual>
     
@@ -1008,6 +1061,8 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#stanley_hudson">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Reader"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#best_thrillers_discussion"/>
+        <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#goodreads_librarians_group"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanley Hudson</ontologies:name>
     </owl:NamedIndividual>
     
@@ -1018,7 +1073,13 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#the_martian">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#AudioBook"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#new_york"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_states"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#new_release"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_science"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#small_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#crown_publishing_group"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Martian</ontologies:name>
@@ -1029,7 +1090,7 @@
     <!-- http://www.book-discovery.com/ontologies#top_rated -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#top_rated">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Filter"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Category"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#TopRated"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Rated</ontologies:name>
     </owl:NamedIndividual>
@@ -1061,6 +1122,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#yann_martel">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#national_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yann Martel</ontologies:name>
     </owl:NamedIndividual>
     
