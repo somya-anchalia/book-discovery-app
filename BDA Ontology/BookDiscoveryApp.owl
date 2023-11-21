@@ -748,6 +748,17 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#vikram_chandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#vikram_chandra">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vikram Chandra</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#chetan_bhagat -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#chetan_bhagat">
@@ -982,7 +993,7 @@
         <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_kingdom"/>
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
-        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_fiction"/>
+        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
         <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#canongate_books"/>
@@ -1142,7 +1153,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#revolution_2020">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#EBooks"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#HardCover"/>
         <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#mumbai"/>
         <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#india"/>
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
@@ -1276,6 +1287,16 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#penguin_publications -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#penguin_publications">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penguin Publications</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#yann_martel -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#yann_martel">
@@ -1295,7 +1316,7 @@
         <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#mumbai"/>
         <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#india"/>
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
-        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#top_rated"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
         <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
@@ -1305,6 +1326,28 @@
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12-year-old Siya has been missing nine months. It’s a cold case, but Keshav wants to help her mother, Alia, who refuses to give up. </ontologies:description>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400 days</ontologies:name>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#sacred_games -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#sacred_games">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#HardCover"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#mumbai"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#india"/>
+        <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
+        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#penguin_publications"/>
+        <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#vikram_chandra"/>
+        <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games is a mystery/thriller novel by Indian-American author Vikram Chandra published in 2006.</ontologies:description>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games</ontologies:name>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</ontologies:publish_year>
     </owl:NamedIndividual>
     
 
