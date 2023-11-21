@@ -753,7 +753,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#chetan_bhagat">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
-        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#best_fiction_author_nomination"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chetan Bhagat</ontologies:name>
     </owl:NamedIndividual>
     
@@ -1148,7 +1148,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#top_rated"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_fiction"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#amazing_fiction"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#westland_publications"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
@@ -1156,6 +1156,17 @@
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Its story is concerned with a love triangle, corruption and a journey of self-discovery.</ontologies:description>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Revolution 2020</ontologies:name>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#rory_stewart -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#rory_stewart">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rory Stewart</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -1199,6 +1210,28 @@
         <ontologies:description>The Martian is a 2011 science fiction debut novel written by Andy Weir.</ontologies:description>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Martian</ontologies:name>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#the_places_in_between -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#the_places_in_between">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#EBooks"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#london"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_kingdom"/>
+        <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_3_star"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
+        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_travel"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#bloomsbury_publishing"/>
+        <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#rory_stewart"/>
+        <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Places in Between is a travel narrative by Rory Stewart, a British writer, academic, broadcaster, former diplomat and Member of Parliament, detailing his solo walk across north-central Afghanistan in 2002.</ontologies:description>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Places in Between</ontologies:name>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</ontologies:publish_year>
     </owl:NamedIndividual>
     
 
