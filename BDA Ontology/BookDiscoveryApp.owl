@@ -225,15 +225,6 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#cost -->
-
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#cost">
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#count -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#count">
@@ -263,11 +254,10 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#first_name -->
+    <!-- http://www.book-discovery.com/ontologies#isbn -->
 
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#first_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#isbn">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -278,16 +268,6 @@
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#language">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#last_name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#last_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -315,6 +295,21 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#number_pf_pages -->
+
+    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#number_pf_pages"/>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#price">
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -442,12 +437,6 @@
         <owl:equivalentClass rdf:resource="http://www.book-discovery.com/ontologies#Group"/>
         <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Community"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#EBooks -->
-
-    <owl:Class rdf:about="http://www.book-discovery.com/ontologies#EBooks"/>
     
 
 
@@ -744,17 +733,6 @@
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canongate Books</ontologies:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#vikram_chandra -->
-
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#vikram_chandra">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
-        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vikram Chandra</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -1095,6 +1073,16 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#penguin_publications -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#penguin_publications">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penguin Publications</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#rating_1_star -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#rating_1_star">
@@ -1182,6 +1170,28 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#sacred_games -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#sacred_games">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#HardCover"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#mumbai"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#india"/>
+        <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
+        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#penguin_publications"/>
+        <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#vikram_chandra"/>
+        <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games is a mystery/thriller novel by Indian-American author Vikram Chandra published in 2006.</ontologies:description>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games</ontologies:name>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#small_size -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#small_size">
@@ -1229,7 +1239,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#the_places_in_between">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#EBooks"/>
         <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#london"/>
         <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_kingdom"/>
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_3_star"/>
@@ -1277,22 +1286,23 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#vikram_chandra -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#vikram_chandra">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vikram Chandra</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#westland_publications -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#westland_publications">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westland Publications</ontologies:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#penguin_publications -->
-
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#penguin_publications">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penguin Publications</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -1326,28 +1336,6 @@
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12-year-old Siya has been missing nine months. It’s a cold case, but Keshav wants to help her mother, Alia, who refuses to give up. </ontologies:description>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400 days</ontologies:name>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</ontologies:publish_year>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#sacred_games -->
-
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#sacred_games">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#HardCover"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
-        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#mumbai"/>
-        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#india"/>
-        <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
-        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
-        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
-        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
-        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#penguin_publications"/>
-        <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
-        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#vikram_chandra"/>
-        <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games is a mystery/thriller novel by Indian-American author Vikram Chandra published in 2006.</ontologies:description>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games</ontologies:name>
-        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</ontologies:publish_year>
     </owl:NamedIndividual>
     
 
