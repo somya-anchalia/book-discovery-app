@@ -645,6 +645,16 @@
     
 
 
+    <!-- http://www.book-discovernational_book_awardy.com/ontologies#mumbai -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovernational_book_awardy.com/ontologies#mumbai">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#City"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Location"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#a_promised_land -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#a_promised_land">
@@ -1058,11 +1068,7 @@
 
     <!-- http://www.book-discovery.com/ontologies#mumbai -->
 
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#mumbai">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#City"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Location"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</ontologies:name>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#mumbai"/>
     
 
 
@@ -1347,6 +1353,32 @@
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ontologies:number_of_pages>
         <ontologies:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</ontologies:price>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#the_seventh_son -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#the_seventh_son">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#AudioBook"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#london"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_kingdom"/>
+        <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_2_star"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#new_release"/>
+        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_science"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_amazing_fiction"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#crown_publishing_group"/>
+        <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
+        <ontologies:description>The Seventh Son has been praised for its imaginative world-building, complex characters, and suspenseful plot.</ontologies:description>
+        <ontologies:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ontologies:duration>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0010</ontologies:isbn>
+        <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/en/book/show/64645745</ontologies:link>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Seventh Son</ontologies:name>
+        <ontologies:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ontologies:price>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</ontologies:publish_year>
     </owl:NamedIndividual>
     
 
