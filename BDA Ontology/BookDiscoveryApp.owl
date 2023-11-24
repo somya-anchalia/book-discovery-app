@@ -220,6 +220,8 @@
     <!-- http://www.book-discovery.com/ontologies#comment -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#comment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -249,7 +251,18 @@
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#description">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#duration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#AudioBook"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -257,6 +270,7 @@
     <!-- http://www.book-discovery.com/ontologies#isbn -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#isbn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -277,6 +291,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#link">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -301,13 +316,25 @@
 
     <!-- http://www.book-discovery.com/ontologies#number_pf_pages -->
 
-    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#number_pf_pages"/>
+    <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#number_pf_pages">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Ebooks"/>
+                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#HardCover"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.book-discovery.com/ontologies#price -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#price">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
@@ -327,6 +354,7 @@
     <!-- http://www.book-discovery.com/ontologies#thumbnail_url -->
 
     <owl:DatatypeProperty rdf:about="http://www.book-discovery.com/ontologies#thumbnail_url">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -336,6 +364,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -625,7 +654,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_biography"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_best_book_ever"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#canongate_books"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
@@ -633,15 +662,6 @@
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Promised Land is a memoir by Barack Obama, the 44th president of the United States from 2009 to 2017.</ontologies:description>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Promised Land</ontologies:name>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</ontologies:publish_year>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#amazing_fiction -->
-
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#amazing_fiction">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amazing Fiction</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -665,15 +685,6 @@
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Weir</ontologies:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.book-discovery.com/ontologies#best_book_ever -->
-
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#best_book_ever">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Book Ever</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -744,6 +755,34 @@
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
         <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chetan Bhagat</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#comment_amazing_fiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#comment_amazing_fiction">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amazing Fiction</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#comment_best_book_ever -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#comment_best_book_ever">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Book Ever</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#comment_good_thriller -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#comment_good_thriller">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Size"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good Thriller</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -849,16 +888,6 @@
     
 
 
-    <!-- http://www.book-discovery.com/ontologies#good_thriller -->
-
-    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#good_thriller">
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Review"/>
-        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Size"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good Thriller</ontologies:name>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.book-discovery.com/ontologies#goodreads_choice_award -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#goodreads_choice_award">
@@ -888,7 +917,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#top_rated"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_fiction"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#amazing_fiction"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_amazing_fiction"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#bloomsbury_publishing"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#readers_favorite_book_award"/>
@@ -972,7 +1001,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_good_thriller"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#canongate_books"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#readers_favorite_book_award"/>
@@ -1147,7 +1176,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#top_rated"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_fiction"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#amazing_fiction"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_amazing_fiction"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#westland_publications"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
@@ -1180,7 +1209,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#good_thriller"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_good_thriller"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#medium_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#penguin_publications"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
@@ -1223,12 +1252,13 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_4_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#new_release"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_science"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_best_book_ever"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#small_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#crown_publishing_group"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
         <ontologies:description>The Martian is a 2011 science fiction debut novel written by Andy Weir.</ontologies:description>
+        <ontologies:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ontologies:duration>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Martian</ontologies:name>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ontologies:publish_year>
     </owl:NamedIndividual>
@@ -1244,7 +1274,7 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_3_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_travel"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_best_book_ever"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#bloomsbury_publishing"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
@@ -1328,13 +1358,16 @@
         <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
         <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#top_rated"/>
         <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_thriller"/>
-        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#best_book_ever"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_best_book_ever"/>
         <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#large_size"/>
         <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#westland_publications"/>
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12-year-old Siya has been missing nine months. It’s a cold case, but Keshav wants to help her mother, Alia, who refuses to give up. </ontologies:description>
+        <ontologies:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ontologies:duration>
+        <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/en/book/show/59237341</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400 days</ontologies:name>
+        <ontologies:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ontologies:price>
         <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</ontologies:publish_year>
     </owl:NamedIndividual>
     
