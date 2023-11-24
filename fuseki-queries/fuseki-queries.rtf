@@ -1,47 +1,38 @@
 PREFIX books: <http://www.book-discovery.com/ontologies#>
 
+
 #Query1: Books of a "Thriller" Genre and rating >= 4 stars - (sort & group if applicable)
 #Query2: Books by authors nominated for "International Author Nomination" and price <= £100 - (sort & group if applicable)
 #Query3: Books with review "Best book ever" and published year >= 2001 - (sort & group if applicable)
-#Query4: Books that received "Goodreads choice Award" and published by "Canongate Books" - (sort & group if applicable)
+#Query4: Query4: Books that received "Goodreads Choice Award" and were published by "Canongate Books" - (sort & group if applicable)
 #Query5: Books published in a "India" and written by "Chetan Bhagat" - (sort & group if applicable)
 
-
-# Query 0:
-
-#SELECT ?book_name ?genre_name
-#WHERE{
-#   {?book a books:Book}
-#   {?book books:has_genre ?genre}
-#   {?book books:name ?book_name}
-#   {?genre books:name ?genre_name}
-# }
+# =========================
 
 # Query 1:
 
-#SELECT ?book_name ?genre_name
+#SELECT ?ISBN ?Book_Name ?Genre ?Average_Rating ?Author ?Description
 #WHERE{
 #   {?book a books:Book}
 #   {?book books:has_genre ?genre}
-#   {?book books:name ?book_name}
-#   {?genre books:name ?genre_name}
-#   FILTER (?genre_name = "Thriller")
+#   {?book books:name ?Book_Name}
+#   {?book books:has_average_rating ?review}
+#   {?review books:average_rating ?Avg_Rating}
+#   {?genre books:name ?Genre}
+#   FILTER (?Genre = "Thriller" && ?Avg_Rating >= 4)
+#   BIND(CONCAT(STR(?Avg_Rating), " stars") AS ?Average_Rating)
+#   {?book books:isbn ?ISBN}
+#   {?book books:description ?Description}
+#   {?book books:written_by ?AuthorObj}
+#   {?AuthorObj books:name ?Author}
 # }
+#ORDER BY ?Book_Name
 
-# Query 2:
 
-SELECT ?Book_Name ?Genre ?Average_Rating
-WHERE{
-   {?book a books:Book}
-   {?book books:has_genre ?genre}
-   {?book books:name ?Book_Name}
-   {?book books:has_average_rating ?avg_rating}
-   {?avg_rating books:average_rating ?Average_Rating}
-   {?genre books:name ?Genre}
-   FILTER (?Genre = "Thriller" && ?Average_Rating >= 5)
- }
 
-# ======================================================
+
+
+# REFER =============================
 
 #SELECT  ?category (GROUP_CONCAT(?title; SEPARATOR=", ") AS ?titles) (GROUP_CONCAT(?price; SEPARATOR=", ") AS ?prices) (GROUP_CONCAT(?brand; SEPARATOR=", ") AS ?brands)
 #WHERE{
