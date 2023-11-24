@@ -660,6 +660,7 @@
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Promised Land is a memoir by Barack Obama, the 44th president of the United States from 2009 to 2017.</ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0002</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/book/show/55361205-a-promised-land</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Promised Land</ontologies:name>
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">460</ontologies:number_of_pages>
@@ -926,6 +927,7 @@
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#readers_favorite_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#jk_rowling"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling.</ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0003</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/series/45175-harry-potter</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</ontologies:name>
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</ontologies:number_of_pages>
@@ -1013,6 +1015,7 @@
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#readers_favorite_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life of Pi is a Canadian philosophical novel by Yann Martel published in 2001.</ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0004</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/book/show/4214.Life_of_Pi</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Of Pi</ontologies:name>
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</ontologies:number_of_pages>
@@ -1191,6 +1194,7 @@
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#goodreads_choice_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Its story is concerned with a love triangle, corruption and a journey of self-discovery.</ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0005</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/en/book/show/12615008</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Revolution 2020</ontologies:name>
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</ontologies:number_of_pages>
@@ -1227,6 +1231,7 @@
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#vikram_chandra"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games is a mystery/thriller novel by Indian-American author Vikram Chandra published in 2006.</ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0006</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/book/show/40090.Sacred_Games</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sacred Games</ontologies:name>
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</ontologies:number_of_pages>
@@ -1274,6 +1279,7 @@
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
         <ontologies:description>The Martian is a 2011 science fiction debut novel written by Andy Weir.</ontologies:description>
         <ontologies:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ontologies:duration>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0007</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.audible.co.uk/pd/The-Martian-Audiobook/B082BFHCZ5</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Martian</ontologies:name>
         <ontologies:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</ontologies:price>
@@ -1298,6 +1304,7 @@
         <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#national_book_award"/>
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#rory_stewart"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Places in Between is a travel narrative by Rory Stewart, a British writer, academic, broadcaster, former diplomat and Member of Parliament, detailing his solo walk across north-central Afghanistan in 2002.</ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0008</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/en/book/show/95643</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Places in Between</ontologies:name>
         <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</ontologies:number_of_pages>
@@ -1386,6 +1393,7 @@
         <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
         <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12-year-old Siya has been missing nine months. It’s a cold case, but Keshav wants to help her mother, Alia, who refuses to give up. </ontologies:description>
         <ontologies:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ontologies:duration>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0001</ontologies:isbn>
         <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/en/book/show/59237341</ontologies:link>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400 days</ontologies:name>
         <ontologies:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ontologies:price>
