@@ -442,6 +442,7 @@
 
     <owl:Class rdf:about="http://www.book-discovery.com/ontologies#City">
         <rdfs:subClassOf rdf:resource="http://www.book-discovery.com/ontologies#Location"/>
+        <owl:disjointWith rdf:resource="http://www.book-discovery.com/ontologies#Country"/>
     </owl:Class>
     
 
@@ -1209,7 +1210,7 @@
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#rory_stewart">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
-        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#national_author_nomination"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rory Stewart</ontologies:name>
     </owl:NamedIndividual>
     
@@ -1241,6 +1242,16 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#simon_and_schuster -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#simon_and_schuster">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Publisher"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon And Schuster</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#small_size -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#small_size">
@@ -1258,6 +1269,32 @@
         <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#best_thrillers_discussion"/>
         <ontologies:belongs_to rdf:resource="http://www.book-discovery.com/ontologies#goodreads_librarians_group"/>
         <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanley Hudson</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#steve_jobs -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#steve_jobs">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Ebooks"/>
+        <ontologies:first_published_city rdf:resource="http://www.book-discovery.com/ontologies#new_york"/>
+        <ontologies:first_published_country rdf:resource="http://www.book-discovery.com/ontologies#united_states"/>
+        <ontologies:has_average_rating rdf:resource="http://www.book-discovery.com/ontologies#rating_5_star"/>
+        <ontologies:has_category rdf:resource="http://www.book-discovery.com/ontologies#best_seller"/>
+        <ontologies:has_genre rdf:resource="http://www.book-discovery.com/ontologies#genre_biography"/>
+        <ontologies:has_review rdf:resource="http://www.book-discovery.com/ontologies#comment_best_book_ever"/>
+        <ontologies:has_size rdf:resource="http://www.book-discovery.com/ontologies#small_size"/>
+        <ontologies:published_by rdf:resource="http://www.book-discovery.com/ontologies#simon_and_schuster"/>
+        <ontologies:receive_award rdf:resource="http://www.book-discovery.com/ontologies#readers_favorite_book_award"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#walter_isaacson"/>
+        <ontologies:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Jobs is the authorized self-titled biography of American business magnate and Apple co-founder Steve Jobs. </ontologies:description>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book-0009</ontologies:isbn>
+        <ontologies:link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.goodreads.com/book/show/11084145-steve-jobs</ontologies:link>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Jobs</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</ontologies:number_of_pages>
+        <ontologies:price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</ontologies:price>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</ontologies:publish_year>
     </owl:NamedIndividual>
     
 
@@ -1355,6 +1392,17 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#walter_isaacson -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#walter_isaacson">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Author"/>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Person"/>
+        <ontologies:nominated_for rdf:resource="http://www.book-discovery.com/ontologies#international_author_nomination"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter Isaacson</ontologies:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.book-discovery.com/ontologies#westland_publications -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#westland_publications">
@@ -1410,35 +1458,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Author"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Publisher"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Reader"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#BestSeller"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#NewRelease"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#TopRated"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Biography"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Business"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Fiction"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Mystery"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Science"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Sports"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Thriller"/>
-            <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Travel"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
