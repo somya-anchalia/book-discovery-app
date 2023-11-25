@@ -1005,7 +1005,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#large_size">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Large"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Large Size</ontologies:name>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Large</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -1050,7 +1050,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#medium_size">
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Medium"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Size</ontologies:name>
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Size"/>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium</ontologies:name>
     </owl:NamedIndividual>
     
 
@@ -1261,8 +1262,9 @@
     <!-- http://www.book-discovery.com/ontologies#small_size -->
 
     <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#small_size">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Size"/>
         <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Small"/>
-        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small Size</ontologies:name>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small</ontologies:name>
     </owl:NamedIndividual>
     
 

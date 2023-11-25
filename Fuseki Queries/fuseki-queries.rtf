@@ -1,34 +1,12 @@
 PREFIX books: <http://www.book-discovery.com/ontologies#>
 
-SELECT ?ISBN ?Book_Name ?Author_Name ?Book_Price ?Nomination ?Genre
-WHERE{
-   {?book a books:Book}
-   {?book books:written_by ?author}
-   {?book books:name ?Book_Name}
-   {?book books:price ?Price}
-   BIND(CONCAT("£",STR(?Price)) AS ?Book_Price)
-   {?author books:name ?Author_Name}
-   {?author books:nominated_for ?nominationObj}
-   {?nominationObj books:name ?Nomination}
-   FILTER (?Nomination = "International Author Nomination" && ?Price<60)
-   {?book books:has_average_rating ?review}
-   {?review books:average_rating ?Avg_Rating}
-   BIND(CONCAT(STR(?Avg_Rating), " stars") AS ?Average_Rating)
-   {?book books:isbn ?ISBN}
-   {?book books:has_genre ?genreObj}
-   {?genreObj books:name ?Genre}
- }
-ORDER BY ?Price
+#Query1: Thriller books with at least 4 star ratings.
+#Query2: Medium or large sized books authored by Chetan bhagat and published in India.
+#Query3: Books that were published after 2010 and have been reviewed as best book ever. 
+#Query4: Show books whose writes received International Author Nomination and have price less than £60.
+#Query5: Books that received National Book Award grouped by their Publisher.
 
-#Query1: Books of a "Thriller" Genre and rating >= 4 stars - (sort & group if applicable)
-#Query2: Books by authors nominated for "International Author Nomination" and price <= £60 - (sort & group if applicable)
-#Query3: Books with review "Best book ever" and published year >= 2001 - (sort & group if applicable)
-#Query4: Query4: Books that received "Goodreads Choice Award" and were published by "Canongate Books" - (sort & group if applicable)
-#Query5: Books published in a "India" and written by "Chetan Bhagat" - (sort & group if applicable)
-
-# =========================
-
-# Query 1:
+# Query 1: =========================
 
 #SELECT ?ISBN ?Book_Name ?Genre ?Average_Rating ?Author ?Description
 #WHERE{
@@ -47,7 +25,55 @@ ORDER BY ?Price
 # }
 #ORDER BY ?Book_Name
 
-#Query2:
+# Query 2: =========================
+
+#SELECT ?ISBN ?Book_Name ?Country_Name ?Author_Name (?Size_Name AS ?Size) ?Book_Price ?Genre
+#WHERE {
+#  {?book a books:Book}
+#  {?book books:name ?Book_Name}
+#  {?book books:first_published_country ?country}
+#  {?book books:written_by ?author}
+#  {?author books:name ?Author_Name}
+#  {?book books:has_size ?size}
+#  {?size books:name ?Size_Name}
+#  FILTER (?Author_Name = "Chetan Bhagat" && (?Size_Name = "Medium" || ?Size_Name = "Large"))
+#  {
+#    SELECT *
+#    WHERE {
+#      {?country books:name ?Country_Name}
+#      FILTER (?Country_Name = "India")
+#    }
+#  }
+#  {?book books:has_genre ?genre}
+#  {?genre books:name ?Genre}
+#  {?book books:isbn ?ISBN}
+#  {?book books:price ?Price}
+#  BIND(CONCAT("£",STR(?Price)) AS ?Book_Price)
+#}
+
+# Query 3: =========================
+
+#SELECT ?ISBN ?Book_Name ?Review ?Publish_Year ?Author_Name ?Average_Rating ?Genre
+#WHERE{
+#   {?book a books:Book}
+#   {?book books:written_by ?author}
+#   {?author books:name ?Author_Name}
+#   {?book books:name ?Book_Name}
+#   {?book books:publish_year ?Publish_Year}
+#   {?book books:has_review ?ReviewObj}
+#   {?ReviewObj books:name ?Review}
+#   FILTER (?Review = "Best Book Ever" && ?Publish_Year>2010)
+#   {?book books:has_average_rating ?review}
+#   {?review books:average_rating ?Avg_Rating}
+#   BIND(CONCAT(STR(?Avg_Rating), " stars") AS ?Average_Rating)
+#   {?book books:isbn ?ISBN}
+#   {?book books:has_genre ?genreObj}
+#   {?genreObj books:name ?Genre}
+# }
+#ORDER BY ?Publish_Year
+
+
+# Query 4: =========================
 
 #SELECT ?ISBN ?Book_Name ?Author_Name ?Book_Price ?Nomination ?Genre
 #WHERE{
@@ -70,17 +96,22 @@ ORDER BY ?Price
 #ORDER BY ?Price
 
 
+# Query 5: =========================
 
-
-# REFER =============================
-
-#SELECT  ?category (GROUP_CONCAT(?title; SEPARATOR=", ") AS ?titles) (GROUP_CONCAT(?price; SEPARATOR=", ") AS ?prices) (GROUP_CONCAT(?brand; SEPARATOR=", ") AS ?brands)
+#SELECT ?Publisher_Name (GROUP_CONCAT(?ISBN; SEPARATOR=", ") AS ?ISBNs) (GROUP_CONCAT(?Book_Name; SEPARATOR=", ") AS ?Book_Names) (GROUP_CONCAT(?Author_Name; SEPARATOR=", ") AS ?Author_Names) (GROUP_CONCAT(?Award_Name; SEPARATOR=", ") AS ?Awards) (GROUP_CONCAT(?Genre; SEPARATOR=", ") AS ?Genres)
 #WHERE{
-#?x a ecom:Product.
-#?x ecom:title ?title.
-#?x ecom:category ?category.
-#?x ecom:price ?price.
-#?x ecom:brand ?brand.
-#BIND(CONCAT("£",STR(?price)) AS ?full_price)
-#}
-#GROUP BY ?category
+#   {?book a books:Book}
+#   {?book books:written_by ?author}
+#   {?author books:name ?Author_Name}
+#   {?book books:name ?Book_Name}
+#   {?book books:published_by ?publisher}
+#   {?publisher books:name ?Publisher_Name}
+#   {?book books:receive_award ?award}
+#   {?award books:name ?Award_Name}
+#   FILTER (?Award_Name = "National Book Award")
+#   {?book books:isbn ?ISBN}
+#   {?book books:has_genre ?genreObj}
+#   {?genreObj books:name ?Genre}
+# }
+#GROUP BY ?Publisher_Name
+#ORDER BY ?Author_Names
