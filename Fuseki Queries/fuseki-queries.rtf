@@ -1,8 +1,27 @@
 PREFIX books: <http://www.book-discovery.com/ontologies#>
 
+SELECT ?ISBN ?Book_Name ?Author_Name ?Book_Price ?Nomination ?Genre
+WHERE{
+   {?book a books:Book}
+   {?book books:written_by ?author}
+   {?book books:name ?Book_Name}
+   {?book books:price ?Price}
+   BIND(CONCAT("£",STR(?Price)) AS ?Book_Price)
+   {?author books:name ?Author_Name}
+   {?author books:nominated_for ?nominationObj}
+   {?nominationObj books:name ?Nomination}
+   FILTER (?Nomination = "International Author Nomination" && ?Price<60)
+   {?book books:has_average_rating ?review}
+   {?review books:average_rating ?Avg_Rating}
+   BIND(CONCAT(STR(?Avg_Rating), " stars") AS ?Average_Rating)
+   {?book books:isbn ?ISBN}
+   {?book books:has_genre ?genreObj}
+   {?genreObj books:name ?Genre}
+ }
+ORDER BY ?Price
 
 #Query1: Books of a "Thriller" Genre and rating >= 4 stars - (sort & group if applicable)
-#Query2: Books by authors nominated for "International Author Nomination" and price <= £100 - (sort & group if applicable)
+#Query2: Books by authors nominated for "International Author Nomination" and price <= £60 - (sort & group if applicable)
 #Query3: Books with review "Best book ever" and published year >= 2001 - (sort & group if applicable)
 #Query4: Query4: Books that received "Goodreads Choice Award" and were published by "Canongate Books" - (sort & group if applicable)
 #Query5: Books published in a "India" and written by "Chetan Bhagat" - (sort & group if applicable)
@@ -28,6 +47,27 @@ PREFIX books: <http://www.book-discovery.com/ontologies#>
 # }
 #ORDER BY ?Book_Name
 
+#Query2:
+
+#SELECT ?ISBN ?Book_Name ?Author_Name ?Book_Price ?Nomination ?Genre
+#WHERE{
+#   {?book a books:Book}
+#   {?book books:written_by ?author}
+#   {?book books:name ?Book_Name}
+#   {?book books:price ?Price}
+#   BIND(CONCAT("£",STR(?Price)) AS ?Book_Price)
+#   {?author books:name ?Author_Name}
+#   {?author books:nominated_for ?nominationObj}
+#   {?nominationObj books:name ?Nomination}
+#   FILTER (?Nomination = "International Author Nomination" && ?Price<60)
+#   {?book books:has_average_rating ?review}
+#   {?review books:average_rating ?Avg_Rating}
+#   BIND(CONCAT(STR(?Avg_Rating), " stars") AS ?Average_Rating)
+#   {?book books:isbn ?ISBN}
+#   {?book books:has_genre ?genreObj}
+#   {?genreObj books:name ?Genre}
+# }
+#ORDER BY ?Price
 
 
 
