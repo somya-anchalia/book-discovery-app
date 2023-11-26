@@ -1,6 +1,6 @@
 PREFIX books: <http://www.book-discovery.com/ontologies#>
 
-#Query1: Thriller books with at least 4 star ratings.
+#Query1: Thriller books with at least 4 star ratings and categorize them based on rating.
 #Query2: Medium or large sized books authored by Chetan bhagat and published in India.
 #Query3: Books that were published after 2010 and have been reviewed as best book ever. 
 #Query4: Show books whose writes received International Author Nomination and have price less than £60.
@@ -8,7 +8,7 @@ PREFIX books: <http://www.book-discovery.com/ontologies#>
 
 # Query 1: =========================
 
-#SELECT ?ISBN ?Book_Name ?Genre ?Average_Rating ?Author ?Description
+#SELECT ?ISBN ?Book_Name ?Genre ?Average_Rating ?Category ?Author ?Description
 #WHERE{
 #   {?book a books:Book}
 #   {?book books:has_genre ?genre}
@@ -19,9 +19,10 @@ PREFIX books: <http://www.book-discovery.com/ontologies#>
 #   FILTER (?Genre = "Thriller" && ?Avg_Rating >= 4)
 #   BIND(CONCAT(STR(?Avg_Rating), " stars") AS ?Average_Rating)
 #   {?book books:isbn ?ISBN}
-#   {?book books:description ?Description}
+#   BIND(IF(?Avg_Rating=4, "Good", "Very good") AS ?Category)
 #   {?book books:written_by ?AuthorObj}
 #   {?AuthorObj books:name ?Author}
+#   {?book books:description ?Description}
 # }
 #ORDER BY ?Book_Name
 
