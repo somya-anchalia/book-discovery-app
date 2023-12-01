@@ -117,6 +117,8 @@
     <!-- http://www.book-discovery.com/ontologies#has_type -->
 
     <owl:ObjectProperty rdf:about="http://www.book-discovery.com/ontologies#has_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
         <rdfs:range>
             <owl:Class>
@@ -306,6 +308,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Book"/>
                     <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Community"/>
+                    <rdf:Description rdf:about="http://www.book-discovery.com/ontologies#Person"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
