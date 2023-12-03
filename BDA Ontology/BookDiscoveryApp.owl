@@ -1487,6 +1487,216 @@
     
 
 
+    <!-- http://www.book-discovery.com/ontologies#667 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#667">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">667</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthem</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#668 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#668">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">668</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We the Living</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">464</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#669 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#669">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">669</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capitalism: The Unknown Ideal</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#670 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#670">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#rory_stewart"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">670</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Letters of Ayn Rand</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">681</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#672 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#672">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">672</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sailing for Dummies</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">416</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#685 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#685">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">685</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Natural</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">231</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#698 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#698">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">698</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digging to America</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">277</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#702 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#702">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#rory_stewart"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">702</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern Latin America</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">528</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#703 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#703">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">703</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Plot Against America</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">391</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#787 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#787">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">787</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Mini Rough Guide to London</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">363</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#793 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#793">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">793</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best of London (Lonely Planet Best Of)</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#797 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#797">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#rory_stewart"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">797</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet Londres</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#823 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#823">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#chetan_bhagat"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">823</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quicksilver (The Baroque Cycle  #1)</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">927</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#824 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#824">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#yann_martel"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">824</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cobweb</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">448</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.book-discovery.com/ontologies#826 -->
+
+    <owl:NamedIndividual rdf:about="http://www.book-discovery.com/ontologies#826">
+        <rdf:type rdf:resource="http://www.book-discovery.com/ontologies#Book"/>
+        <ontologies:written_by rdf:resource="http://www.book-discovery.com/ontologies#andy_weir"/>
+        <ontologies:average_rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ontologies:average_rating>
+        <ontologies:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">826</ontologies:isbn>
+        <ontologies:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Big U</ontologies:name>
+        <ontologies:number_of_pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">308</ontologies:number_of_pages>
+        <ontologies:publish_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</ontologies:publish_year>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
